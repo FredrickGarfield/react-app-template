@@ -1,3 +1,4 @@
+/* DO NOT MODIFY; this is a copy */
 /*global Ultraviolet*/
 self.__uv$config = {
     prefix: location.pathname.split("/").slice(0, -1).join("/") + "/api/",

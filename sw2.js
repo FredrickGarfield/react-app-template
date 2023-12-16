@@ -1,3 +1,4 @@
+// DO NOT MODIFY; this is a copy
 importScripts("res/bundle.js");
 importScripts("res/config2.js");
 importScripts("res/the.js");
