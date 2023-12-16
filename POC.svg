@@ -1,7 +1,18 @@
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject x="20" y="20" width="200" height="100">
+<svg xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
     <!-- TODO: Secure with a client-side version of proxy lock -->
       <body xmlns="http://www.w3.org/1999/xhtml">
+        <style>
+          <![CDATA[
+            @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+            body {
+              margin: unset;
+              text-align: center;
+              font-family: 'Space Mono', monospace;
+            }
+          ]]>
+        </style>
         <script src="./res/bundle.js"></script>
         <script src="./res/config.js"></script>
         <script>
