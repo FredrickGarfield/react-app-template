@@ -1,5 +1,5 @@
 importScripts("res/bundle.js");
-importScripts("res/config2.js");
+importScripts("res/config.js");
 importScripts("res/the.js");
 
 const sw = new UVServiceWorker();

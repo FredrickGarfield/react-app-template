@@ -1,4 +1,3 @@
-<!-- THIS IS-->
 <svg xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <!-- TODO: Secure with a client-side version of proxy lock -->
@@ -7,7 +6,7 @@
     <body xmlns="http://www.w3.org/1999/xhtml">
       <style>
         <![CDATA[
-        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Space+Mono&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Space+Mono&display=swap");
 
         body {
           margin: unset;
@@ -37,7 +36,12 @@
           if (omnibox instanceof HTMLInputElement) window.location.pathname = self.__uv$config.prefix + self.__uv$config.encodeUrl(omnibox.value);
           else throw new Error("Unable to find the omnibox");
         }
-        if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js").then(reg => console.log("Service worker registered!")).catch(alert);
+        const input = document.getElementById("omnibox");
+        input.addEventListener("keyup", e => {
+          if (e.code === "Enter")
+            submit();
+        });
+        if ("serviceWorker" in navigator) navigator.serviceWorker.register(self.__uv$config.sw).then(reg => console.log("Service worker registered!")).catch(alert);
         ]]>
       </script>
     </body>
