@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <!-- TODO: Secure with a client-side version of proxy lock -->
+    <!-- Prevent search indexing -->
+    <meta name="robots" content="noindex, follow" />
+    <body xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        <![CDATA[
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+        body {
+          margin: unset;
+          text-align: center;
+        }
+
+        input button {
+          font-family: 'Space Mono', monospace;
+        }
+        ]]>
+      </style>
+      <script src="./res/bundle.js"></script>
+      <script src="./res/config.js"></script>
+      <h1>Pr&#173;em&#173;ium Un&#173;bl&#173;o&#173;cker</h1>
+      <input id="omnibox" type="text" placeholder="Type in the URL"></input>
+      <button onclick="submit()">Go</button>
+      <script>
+        <![CDATA[
+        function submit() {
+          const omnibox = document.getElementById("omnibox");
+          if (omnibox instanceof HTMLInputElement) window.location.pathname = self.__uv$config.prefix + omnibox.textContent;
+          else throw new Error("Unable to find the omnibox");
+        }
+        if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js").then(reg => alert("Service worker registered!")).catch(alert);
+        ]]>
+      </script>
+    </body>
+  </foreignObject>
+</svg>
