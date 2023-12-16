@@ -41,7 +41,7 @@
           if (e.code === "Enter")
             submit();
         });
-        if ("serviceWorker" in navigator) navigator.serviceWorker.register(self.__uv$config.sw).then(reg => console.log("Service worker registered!")).catch(alert);
+        if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js").then(reg => console.log("Service worker registered!")).catch(alert);
         ]]>
       </script>
     </body>
